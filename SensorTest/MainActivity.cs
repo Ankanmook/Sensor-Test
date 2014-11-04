@@ -163,6 +163,8 @@ namespace SensorTest
 		}
 
 		/*
+		* For battery information to be captured. Would be done as a part of 
+		* next release
 		public void onReceive(Context context, Intent intent) {
 			bool isPresent = intent.GetBooleanExtra("present", false);
 			//Battery Technology
