@@ -96,7 +96,10 @@ namespace SensorTest
 		[JsonProperty(PropertyName = "complete")]
 		public bool complete { get; set; }
 
-
+		/*
+		 * Device wrapper to wrap the information into
+		 * json object
+		 */
 		public class DeviceDataWrapper : Java.Lang.Object
 		{
 			public DeviceData DeviceDataItem { get; private set; }
@@ -106,7 +109,10 @@ namespace SensorTest
 				this.DeviceDataItem = item;
 			}
 		}
-			
+		
+		/*
+		 * Adding gravity and pressure information to json file
+		 */
 		public void AddGravitySensorData(GravitySensorData gsData){
 		
 			gravity_x = gsData.xComponent;
