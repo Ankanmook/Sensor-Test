@@ -1,3 +1,8 @@
+/*
+* This class is the major class which filters the noisy data
+* to make sure the sensor data calculated is the most stable data
+*/
+
 ﻿using System;
 using System.Collections.Generic;
 
@@ -88,13 +93,19 @@ namespace SensorTest
 			return cumulative_gravity;
 
 		}
-
+		
+		/*
+		 * Returns difference in gravity from our g values to our recorded data
+		 */
 		public double getErrorGravity(){
 			getGravity ();
 			error_gravity = cumulative_gravity - gravity_Value;
 			return error_gravity;
 		}
 
+		/*
+		 * Returns difference in ressure from barometer data and weather api data
+		 */
 		public double getErrorPressure(){
 			error_pressure = pressureComponent - pressure_service;
 			return error_pressure;
