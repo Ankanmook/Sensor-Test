@@ -44,9 +44,11 @@ namespace SensorTest
 		//Sensor variables
 		private static readonly object _syncLock = new object();
 		private SensorManager _sensorManager;
-	
+		
+		//string file to incorporate latitude and longitude into one request
 		string latlong = null;
-
+		
+		//calculates the number of times oper weather api has been accessed to limit the api huts
 		int indexOfPressureServiceRequest ;
 
 
@@ -69,11 +71,13 @@ namespace SensorTest
 		//Some unused vairables, might be used in future releases
 		//private TextView _sensorTemeperatureTextView;
 
-
+		//device information to be parsed as session info from previous laout
 		private string device_Id;
 		private string device_Info;
-
+		
+		//gravity and pressure data oject to record all sennor information into one object
 		GravitySensorData gsData;
+		//jason object to send info to the cloud after serilaizing
 		DeviceData srData;
 
 		/*
@@ -218,6 +222,9 @@ namespace SensorTest
 			gsData.collect = true;
 		}
 			
+		/*
+		 * Most important method: Sends the information to the azure cloud
+		 */
 		[Java.Interop.Export()]
 		public async void sendData(){
 
@@ -256,13 +263,6 @@ namespace SensorTest
 				CreateAndShowDialog (e.Message, "EXCEPTION");
 			}
 
-
-			// TODO:: Comment out these lines to remove the in-memory list
-			//sensorList.Add(item);
-			//adapter.Add(item);
-			// NOTE:: End of lines to comment out
-
-			//textNewTodo.Text = "";
 		}
 
 		/*
@@ -379,7 +379,10 @@ namespace SensorTest
 
 			++indexOfPressureServiceRequest;
 		}
-
+		
+		/*
+		 * Gets the current time stamp
+		 */
 		public void getTimeStamp(){
 		
 			DateTime dt = DateTime.Now;
@@ -520,7 +523,9 @@ namespace SensorTest
 			return (double) altpress;
 		}
 
-
+		/*
+		 * On location change even recorded from locations data
+		 */
 		public void OnLocationChanged(Location location)
 		{
 			_currentLocation = location;
@@ -586,12 +591,17 @@ namespace SensorTest
 		{
 		}
 
-
+		/*
+		 * Dialog box 
+		 */
 		void CreateAndShowDialog(Exception exception, String title)
 		{
 			CreateAndShowDialog(exception.Message, title);
 		}
-
+		
+		/*
+		 * Dialog box create alest exceptions 
+		 */
 		void CreateAndShowDialog(string message, string title)
 		{
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -601,7 +611,9 @@ namespace SensorTest
 			builder.Create().Show();
 		}
 
-
+		/*
+		 * Progress handler bar class with events
+		 */
 		class ProgressHandler : DelegatingHandler
 		{
 			int busyCount = 0;
