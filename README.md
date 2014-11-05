@@ -2,11 +2,10 @@ Sensor-Test-Client
 ==================
 
 Version 3.0
-This sensor client is made in Xamarin C# Code
+This sensor client is made in Xamarin C# Code for Android Device (Ice Cream Sandwich and above)
 
-This one has a UI which records the sensor data of the device into Azure Cloud
-Major features whic it records is gravity, pressure, accelerometer, gps, gyroscope and device information (IMIE)
-Device Information is recorded for keeping the track of data which will be used for academic pupose to measure sensor accuracy 
-on collaborative sensor platform
+UI displays sensor data and also has provision for recording the data to Azure Cloud.
+Major sensor information which is recorded are gravity, pressure, accelerometer, gps, gyroscope and device information (IMIE and model information)
+Device Information is recorded for displaying the information back to the user.This data will be kept confidential and will be used for academic pupose to measure sensor accuracy on collaborative sensor platform
 
-Next version will include battery and external temeperature and humidity data (this would be recorded from open weather api)
+Next version will include battery information and external temeperature and humidity data (this would be recorded from open source weather api)
