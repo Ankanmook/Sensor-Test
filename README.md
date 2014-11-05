@@ -1,9 +1,7 @@
 Sensor-Test-Client
 ==================
 RIT Department of Computer Science 
-MSc Project
-Categorizing and adjusting DQ indicators based on test cases: Motion and 
-Environment Sensors 
+MSc Project: Categorizing and adjusting DQ indicators based on test cases: Motion and Environment Sensors 
 Student: Ankan Mookherjee, Advisor: Dr. Leon Reznik
 
 Version 3.0
