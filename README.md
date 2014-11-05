@@ -2,7 +2,7 @@ Sensor-Test-Client
 ==================
 
 Version 3.0
-This sensor client is developed on Xamarin.Android framework using C# Code for Android Device (Ice Cream Sandwich and above)
+This sensor client is developed on Xamarin.Android framework using C# Code for Android Devices (Targeting Ice Cream Sandwich and above)
 
 UI displays sensor data and also has provision for recording the data to Azure Cloud.
 Major sensor information which is recorded are gravity, pressure, accelerometer, gps, gyroscope and device information (IMIE and model information)
