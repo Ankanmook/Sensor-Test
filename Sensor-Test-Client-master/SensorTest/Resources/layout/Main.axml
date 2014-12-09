@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Device ID (IMEI)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblDeviceId"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textDeviceID"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="IP"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblIP"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textIP"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="100px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout_Registered">
+        <TextView
+            android:text="Battery Status"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblBattery_Status"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:visibility="visible" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBatteryStatus"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5"
+            android:inputType="text"
+            android:visibility="visible" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Battery Level"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblBatteryLevel"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBatteryLevel"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Battery Voltage"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblBatteryVoltage"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBatteryVoltage"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Battery Temperature"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblBatteryTemperature"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBatteryTemperature"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Battery Technology"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblBatteryTechnology"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBatteryTechnology"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Accelerometer Compass Barometer"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/lblSensorStatus"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <Button
+            android:text="@string/sensorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/sensorStatusButton"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5"
+            android:clickable="true"
+            android:onClick="@string/hello" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="60px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Rate Accuracy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cmdCalculate"
+            android:layout_marginLeft="105dip"
+            android:layout_weight="5"
+            android:layout_marginBottom="20dip"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="20dip"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

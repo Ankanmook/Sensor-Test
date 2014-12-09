@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#71BCFA"
+        android:padding="6dip">
+        <TextView
+            android:text="Sensor Status"
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="0.12" />
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Device ID"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textDeviceId"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Gravity"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textGravity"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Baromter"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBarometer"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Gyroscope"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textGyroscope"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Magnetic Field"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textMagneticField"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Orientation"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textOrientation"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="GPS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textGPS"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Height"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textHeight"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Humidity"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textHumidity"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Temperature"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="135dip"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView3"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textTemperature"
+            android:layout_weight="5"
+            android:layout_marginLeft="10dip" />
+    </LinearLayout>
+    <Button
+        android:text="Record"
+        android:layout_width="100dip"
+        android:layout_height="60dip"
+        android:id="@+id/cmdRecord"
+        android:autoText="true"
+        android:layout_gravity="center" />
+    <Button
+        android:text="Back"
+        android:layout_width="100dip"
+        android:layout_height="60dip"
+        android:autoText="true"
+        android:id="@+id/cmdBackSensorStatus"
+        android:layout_gravity="center" />
+</LinearLayout>

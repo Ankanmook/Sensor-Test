@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SensorTest_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DeviceData">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="__createdAt" Type="datetimeoffset" Precision="3" Nullable="false" />
+          <Property Name="__updatedAt" Type="datetimeoffset" Precision="3" />
+          <Property Name="__version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="__deleted" Type="bit" Nullable="false" />
+          <Property Name="deviceid" Type="nvarchar(max)" />
+          <Property Name="deviceinfo" Type="nvarchar(max)" />
+          <Property Name="longitude" Type="float" />
+          <Property Name="latitutde" Type="float" />
+          <Property Name="altitude" Type="float" />
+          <Property Name="gravity_cumulative" Type="float" />
+          <Property Name="gravity_x" Type="float" />
+          <Property Name="gravity_y" Type="float" />
+          <Property Name="gravity_z" Type="float" />
+          <Property Name="error_gravity" Type="float" />
+          <Property Name="pressure_device" Type="float" />
+          <Property Name="pressure_service" Type="float" />
+          <Property Name="error_pressure" Type="float" />
+          <Property Name="accelerometer_x" Type="float" />
+          <Property Name="accelerometer_y" Type="float" />
+          <Property Name="accelerometer_z" Type="float" />
+          <Property Name="magneticfeild_x" Type="float" />
+          <Property Name="magneticfeild_y" Type="float" />
+          <Property Name="magneticfeild_z" Type="float" />
+          <Property Name="gyroscope_x" Type="float" />
+          <Property Name="gyroscope_y" Type="float" />
+          <Property Name="gyroscope_z" Type="float" />
+          <Property Name="height" Type="float" />
+          <Property Name="humidity" Type="float" />
+          <Property Name="temperature" Type="float" />
+          <Property Name="battery_status" Type="float" />
+          <Property Name="battery_level" Type="float" />
+          <Property Name="battery_voltage" Type="float" />
+          <Property Name="battery_temperature" Type="float" />
+          <Property Name="battery_technology" Type="nvarchar(max)" />
+          <Property Name="timestamp" Type="datetimeoffset" Precision="3" />
+          <Property Name="azimuth" Type="float" />
+          <Property Name="pitch" Type="float" />
+          <Property Name="roll" Type="float" />
+          <Property Name="complete" Type="bit" />
+        </EntityType>
+        <EntityType Name="DQIndicator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="__createdAt" Type="datetimeoffset" Precision="3" Nullable="false" />
+          <Property Name="__updatedAt" Type="datetimeoffset" Precision="3" />
+          <Property Name="__version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="__deleted" Type="bit" Nullable="false" />
+          <Property Name="gravity" Type="float" />
+          <Property Name="gravity_e" Type="float" />
+          <Property Name="pressure_e" Type="float" />
+          <Property Name="accel_gravity_e" Type="float" />
+          <Property Name="temp_e" Type="float" />
+          <Property Name="azimuth_fusion" Type="float" />
+          <Property Name="pitch_fusion" Type="float" />
+          <Property Name="roll_fusion" Type="float" />
+          <Property Name="azimuth_e_gyro" Type="float" />
+          <Property Name="pitch_e_gyro" Type="float" />
+          <Property Name="roll_e_gyro" Type="float" />
+          <Property Name="deviceid" Type="nvarchar(max)" />
+          <Property Name="deviceinfo" Type="nvarchar(max)" />
+          <Property Name="percentile_g" Type="float" />
+          <Property Name="percentile_accg" Type="float" />
+          <Property Name="percentile_p" Type="float" />
+          <Property Name="percentile_t" Type="float" />
+          <Property Name="percentile_o" Type="float" />
+          <Property Name="score" Type="float" />
+          <Property Name="cumulative_percentile" Type="float" />
+          <Property Name="score_g" Type="float" />
+          <Property Name="score_ga" Type="float" />
+          <Property Name="score_p" Type="float" />
+          <Property Name="score_t" Type="float" />
+          <Property Name="score_f" Type="float" />
+        </EntityType>
+        <EntityContainer Name="SensorTest_dbModelStoreContainer">
+          <EntitySet Name="DeviceData" EntityType="Self.DeviceData" Schema="SensorTest" store:Type="Tables" />
+          <EntitySet Name="DQIndicator" EntityType="Self.DQIndicator" Schema="SensorTest" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SensorTest_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DeviceData">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C__createdAt" Type="DateTimeOffset" Nullable="false" Precision="3" />
+          <Property Name="C__updatedAt" Type="DateTimeOffset" Precision="3" />
+          <Property Name="C__version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="C__deleted" Type="Boolean" Nullable="false" />
+          <Property Name="deviceid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="deviceinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="longitude" Type="Double" />
+          <Property Name="latitutde" Type="Double" />
+          <Property Name="altitude" Type="Double" />
+          <Property Name="gravity_cumulative" Type="Double" />
+          <Property Name="gravity_x" Type="Double" />
+          <Property Name="gravity_y" Type="Double" />
+          <Property Name="gravity_z" Type="Double" />
+          <Property Name="error_gravity" Type="Double" />
+          <Property Name="pressure_device" Type="Double" />
+          <Property Name="pressure_service" Type="Double" />
+          <Property Name="error_pressure" Type="Double" />
+          <Property Name="accelerometer_x" Type="Double" />
+          <Property Name="accelerometer_y" Type="Double" />
+          <Property Name="accelerometer_z" Type="Double" />
+          <Property Name="magneticfeild_x" Type="Double" />
+          <Property Name="magneticfeild_y" Type="Double" />
+          <Property Name="magneticfeild_z" Type="Double" />
+          <Property Name="gyroscope_x" Type="Double" />
+          <Property Name="gyroscope_y" Type="Double" />
+          <Property Name="gyroscope_z" Type="Double" />
+          <Property Name="height" Type="Double" />
+          <Property Name="humidity" Type="Double" />
+          <Property Name="temperature" Type="Double" />
+          <Property Name="battery_status" Type="Double" />
+          <Property Name="battery_level" Type="Double" />
+          <Property Name="battery_voltage" Type="Double" />
+          <Property Name="battery_temperature" Type="Double" />
+          <Property Name="battery_technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="timestamp" Type="DateTimeOffset" Precision="3" />
+          <Property Name="azimuth" Type="Double" />
+          <Property Name="pitch" Type="Double" />
+          <Property Name="roll" Type="Double" />
+          <Property Name="complete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="DQIndicator">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C__createdAt" Type="DateTimeOffset" Nullable="false" Precision="3" />
+          <Property Name="C__updatedAt" Type="DateTimeOffset" Precision="3" />
+          <Property Name="C__version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="C__deleted" Type="Boolean" Nullable="false" />
+          <Property Name="gravity" Type="Double" />
+          <Property Name="gravity_e" Type="Double" />
+          <Property Name="pressure_e" Type="Double" />
+          <Property Name="accel_gravity_e" Type="Double" />
+          <Property Name="temp_e" Type="Double" />
+          <Property Name="azimuth_fusion" Type="Double" />
+          <Property Name="pitch_fusion" Type="Double" />
+          <Property Name="roll_fusion" Type="Double" />
+          <Property Name="azimuth_e_gyro" Type="Double" />
+          <Property Name="pitch_e_gyro" Type="Double" />
+          <Property Name="roll_e_gyro" Type="Double" />
+          <Property Name="deviceid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="deviceinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="percentile_g" Type="Double" />
+          <Property Name="percentile_accg" Type="Double" />
+          <Property Name="percentile_p" Type="Double" />
+          <Property Name="percentile_t" Type="Double" />
+          <Property Name="percentile_o" Type="Double" />
+          <Property Name="score" Type="Double" />
+          <Property Name="cumulative_percentile" Type="Double" />
+          <Property Name="score_g" Type="Double" />
+          <Property Name="score_ga" Type="Double" />
+          <Property Name="score_p" Type="Double" />
+          <Property Name="score_t" Type="Double" />
+          <Property Name="score_f" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="SensorTest_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DeviceDatas" EntityType="Self.DeviceData" />
+          <EntitySet Name="DQIndicators" EntityType="Self.DQIndicator" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SensorTest_dbModelStoreContainer" CdmEntityContainer="SensorTest_dbEntities">
+          <EntitySetMapping Name="DeviceDatas">
+            <EntityTypeMapping TypeName="SensorTest_dbModel.DeviceData">
+              <MappingFragment StoreEntitySet="DeviceData">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="C__createdAt" ColumnName="__createdAt" />
+                <ScalarProperty Name="C__updatedAt" ColumnName="__updatedAt" />
+                <ScalarProperty Name="C__version" ColumnName="__version" />
+                <ScalarProperty Name="C__deleted" ColumnName="__deleted" />
+                <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+                <ScalarProperty Name="deviceinfo" ColumnName="deviceinfo" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="latitutde" ColumnName="latitutde" />
+                <ScalarProperty Name="altitude" ColumnName="altitude" />
+                <ScalarProperty Name="gravity_cumulative" ColumnName="gravity_cumulative" />
+                <ScalarProperty Name="gravity_x" ColumnName="gravity_x" />
+                <ScalarProperty Name="gravity_y" ColumnName="gravity_y" />
+                <ScalarProperty Name="gravity_z" ColumnName="gravity_z" />
+                <ScalarProperty Name="error_gravity" ColumnName="error_gravity" />
+                <ScalarProperty Name="pressure_device" ColumnName="pressure_device" />
+                <ScalarProperty Name="pressure_service" ColumnName="pressure_service" />
+                <ScalarProperty Name="error_pressure" ColumnName="error_pressure" />
+                <ScalarProperty Name="accelerometer_x" ColumnName="accelerometer_x" />
+                <ScalarProperty Name="accelerometer_y" ColumnName="accelerometer_y" />
+                <ScalarProperty Name="accelerometer_z" ColumnName="accelerometer_z" />
+                <ScalarProperty Name="magneticfeild_x" ColumnName="magneticfeild_x" />
+                <ScalarProperty Name="magneticfeild_y" ColumnName="magneticfeild_y" />
+                <ScalarProperty Name="magneticfeild_z" ColumnName="magneticfeild_z" />
+                <ScalarProperty Name="gyroscope_x" ColumnName="gyroscope_x" />
+                <ScalarProperty Name="gyroscope_y" ColumnName="gyroscope_y" />
+                <ScalarProperty Name="gyroscope_z" ColumnName="gyroscope_z" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="humidity" ColumnName="humidity" />
+                <ScalarProperty Name="temperature" ColumnName="temperature" />
+                <ScalarProperty Name="battery_status" ColumnName="battery_status" />
+                <ScalarProperty Name="battery_level" ColumnName="battery_level" />
+                <ScalarProperty Name="battery_voltage" ColumnName="battery_voltage" />
+                <ScalarProperty Name="battery_temperature" ColumnName="battery_temperature" />
+                <ScalarProperty Name="battery_technology" ColumnName="battery_technology" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="azimuth" ColumnName="azimuth" />
+                <ScalarProperty Name="pitch" ColumnName="pitch" />
+                <ScalarProperty Name="roll" ColumnName="roll" />
+                <ScalarProperty Name="complete" ColumnName="complete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DQIndicators">
+            <EntityTypeMapping TypeName="SensorTest_dbModel.DQIndicator">
+              <MappingFragment StoreEntitySet="DQIndicator">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="C__createdAt" ColumnName="__createdAt" />
+                <ScalarProperty Name="C__updatedAt" ColumnName="__updatedAt" />
+                <ScalarProperty Name="C__version" ColumnName="__version" />
+                <ScalarProperty Name="C__deleted" ColumnName="__deleted" />
+                <ScalarProperty Name="gravity" ColumnName="gravity" />
+                <ScalarProperty Name="gravity_e" ColumnName="gravity_e" />
+                <ScalarProperty Name="pressure_e" ColumnName="pressure_e" />
+                <ScalarProperty Name="accel_gravity_e" ColumnName="accel_gravity_e" />
+                <ScalarProperty Name="temp_e" ColumnName="temp_e" />
+                <ScalarProperty Name="azimuth_fusion" ColumnName="azimuth_fusion" />
+                <ScalarProperty Name="pitch_fusion" ColumnName="pitch_fusion" />
+                <ScalarProperty Name="roll_fusion" ColumnName="roll_fusion" />
+                <ScalarProperty Name="azimuth_e_gyro" ColumnName="azimuth_e_gyro" />
+                <ScalarProperty Name="pitch_e_gyro" ColumnName="pitch_e_gyro" />
+                <ScalarProperty Name="roll_e_gyro" ColumnName="roll_e_gyro" />
+                <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+                <ScalarProperty Name="deviceinfo" ColumnName="deviceinfo" />
+                <ScalarProperty Name="percentile_g" ColumnName="percentile_g" />
+                <ScalarProperty Name="percentile_accg" ColumnName="percentile_accg" />
+                <ScalarProperty Name="percentile_p" ColumnName="percentile_p" />
+                <ScalarProperty Name="percentile_t" ColumnName="percentile_t" />
+                <ScalarProperty Name="percentile_o" ColumnName="percentile_o" />
+                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="cumulative_percentile" ColumnName="cumulative_percentile" />
+                <ScalarProperty Name="score_g" ColumnName="score_g" />
+                <ScalarProperty Name="score_ga" ColumnName="score_ga" />
+                <ScalarProperty Name="score_p" ColumnName="score_p" />
+                <ScalarProperty Name="score_t" ColumnName="score_t" />
+                <ScalarProperty Name="score_f" ColumnName="score_f" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
