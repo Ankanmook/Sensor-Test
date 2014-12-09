@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SensorTest_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DeviceData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C__createdAt" Type="DateTimeOffset" Nullable="false" Precision="3" />
+    <Property Name="C__updatedAt" Type="DateTimeOffset" Precision="3" />
+    <Property Name="C__version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="C__deleted" Type="Boolean" Nullable="false" />
+    <Property Name="deviceid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="deviceinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="latitutde" Type="Double" />
+    <Property Name="altitude" Type="Double" />
+    <Property Name="gravity_cumulative" Type="Double" />
+    <Property Name="gravity_x" Type="Double" />
+    <Property Name="gravity_y" Type="Double" />
+    <Property Name="gravity_z" Type="Double" />
+    <Property Name="error_gravity" Type="Double" />
+    <Property Name="pressure_device" Type="Double" />
+    <Property Name="pressure_service" Type="Double" />
+    <Property Name="error_pressure" Type="Double" />
+    <Property Name="accelerometer_x" Type="Double" />
+    <Property Name="accelerometer_y" Type="Double" />
+    <Property Name="accelerometer_z" Type="Double" />
+    <Property Name="magneticfeild_x" Type="Double" />
+    <Property Name="magneticfeild_y" Type="Double" />
+    <Property Name="magneticfeild_z" Type="Double" />
+    <Property Name="gyroscope_x" Type="Double" />
+    <Property Name="gyroscope_y" Type="Double" />
+    <Property Name="gyroscope_z" Type="Double" />
+    <Property Name="height" Type="Double" />
+    <Property Name="humidity" Type="Double" />
+    <Property Name="temperature" Type="Double" />
+    <Property Name="battery_status" Type="Double" />
+    <Property Name="battery_level" Type="Double" />
+    <Property Name="battery_voltage" Type="Double" />
+    <Property Name="battery_temperature" Type="Double" />
+    <Property Name="battery_technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="timestamp" Type="DateTimeOffset" Precision="3" />
+    <Property Name="azimuth" Type="Double" />
+    <Property Name="pitch" Type="Double" />
+    <Property Name="roll" Type="Double" />
+    <Property Name="complete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DQIndicator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C__createdAt" Type="DateTimeOffset" Nullable="false" Precision="3" />
+    <Property Name="C__updatedAt" Type="DateTimeOffset" Precision="3" />
+    <Property Name="C__version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="C__deleted" Type="Boolean" Nullable="false" />
+    <Property Name="gravity" Type="Double" />
+    <Property Name="gravity_e" Type="Double" />
+    <Property Name="pressure_e" Type="Double" />
+    <Property Name="accel_gravity_e" Type="Double" />
+    <Property Name="temp_e" Type="Double" />
+    <Property Name="azimuth_fusion" Type="Double" />
+    <Property Name="pitch_fusion" Type="Double" />
+    <Property Name="roll_fusion" Type="Double" />
+    <Property Name="azimuth_e_gyro" Type="Double" />
+    <Property Name="pitch_e_gyro" Type="Double" />
+    <Property Name="roll_e_gyro" Type="Double" />
+    <Property Name="deviceid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="deviceinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="percentile_g" Type="Double" />
+    <Property Name="percentile_accg" Type="Double" />
+    <Property Name="percentile_p" Type="Double" />
+    <Property Name="percentile_t" Type="Double" />
+    <Property Name="percentile_o" Type="Double" />
+    <Property Name="score" Type="Double" />
+    <Property Name="cumulative_percentile" Type="Double" />
+    <Property Name="score_g" Type="Double" />
+    <Property Name="score_ga" Type="Double" />
+    <Property Name="score_p" Type="Double" />
+    <Property Name="score_t" Type="Double" />
+    <Property Name="score_f" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="SensorTest_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DeviceDatas" EntityType="Self.DeviceData" />
+    <EntitySet Name="DQIndicators" EntityType="Self.DQIndicator" />
+  </EntityContainer>
+</Schema>

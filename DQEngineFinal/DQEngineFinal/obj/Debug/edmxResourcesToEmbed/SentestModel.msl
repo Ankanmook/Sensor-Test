@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SensorTest_dbModelStoreContainer" CdmEntityContainer="SensorTest_dbEntities">
+    <EntitySetMapping Name="DeviceDatas">
+      <EntityTypeMapping TypeName="SensorTest_dbModel.DeviceData">
+        <MappingFragment StoreEntitySet="DeviceData">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C__createdAt" ColumnName="__createdAt" />
+          <ScalarProperty Name="C__updatedAt" ColumnName="__updatedAt" />
+          <ScalarProperty Name="C__version" ColumnName="__version" />
+          <ScalarProperty Name="C__deleted" ColumnName="__deleted" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="deviceinfo" ColumnName="deviceinfo" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitutde" ColumnName="latitutde" />
+          <ScalarProperty Name="altitude" ColumnName="altitude" />
+          <ScalarProperty Name="gravity_cumulative" ColumnName="gravity_cumulative" />
+          <ScalarProperty Name="gravity_x" ColumnName="gravity_x" />
+          <ScalarProperty Name="gravity_y" ColumnName="gravity_y" />
+          <ScalarProperty Name="gravity_z" ColumnName="gravity_z" />
+          <ScalarProperty Name="error_gravity" ColumnName="error_gravity" />
+          <ScalarProperty Name="pressure_device" ColumnName="pressure_device" />
+          <ScalarProperty Name="pressure_service" ColumnName="pressure_service" />
+          <ScalarProperty Name="error_pressure" ColumnName="error_pressure" />
+          <ScalarProperty Name="accelerometer_x" ColumnName="accelerometer_x" />
+          <ScalarProperty Name="accelerometer_y" ColumnName="accelerometer_y" />
+          <ScalarProperty Name="accelerometer_z" ColumnName="accelerometer_z" />
+          <ScalarProperty Name="magneticfeild_x" ColumnName="magneticfeild_x" />
+          <ScalarProperty Name="magneticfeild_y" ColumnName="magneticfeild_y" />
+          <ScalarProperty Name="magneticfeild_z" ColumnName="magneticfeild_z" />
+          <ScalarProperty Name="gyroscope_x" ColumnName="gyroscope_x" />
+          <ScalarProperty Name="gyroscope_y" ColumnName="gyroscope_y" />
+          <ScalarProperty Name="gyroscope_z" ColumnName="gyroscope_z" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="humidity" ColumnName="humidity" />
+          <ScalarProperty Name="temperature" ColumnName="temperature" />
+          <ScalarProperty Name="battery_status" ColumnName="battery_status" />
+          <ScalarProperty Name="battery_level" ColumnName="battery_level" />
+          <ScalarProperty Name="battery_voltage" ColumnName="battery_voltage" />
+          <ScalarProperty Name="battery_temperature" ColumnName="battery_temperature" />
+          <ScalarProperty Name="battery_technology" ColumnName="battery_technology" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="azimuth" ColumnName="azimuth" />
+          <ScalarProperty Name="pitch" ColumnName="pitch" />
+          <ScalarProperty Name="roll" ColumnName="roll" />
+          <ScalarProperty Name="complete" ColumnName="complete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DQIndicators">
+      <EntityTypeMapping TypeName="SensorTest_dbModel.DQIndicator">
+        <MappingFragment StoreEntitySet="DQIndicator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C__createdAt" ColumnName="__createdAt" />
+          <ScalarProperty Name="C__updatedAt" ColumnName="__updatedAt" />
+          <ScalarProperty Name="C__version" ColumnName="__version" />
+          <ScalarProperty Name="C__deleted" ColumnName="__deleted" />
+          <ScalarProperty Name="gravity" ColumnName="gravity" />
+          <ScalarProperty Name="gravity_e" ColumnName="gravity_e" />
+          <ScalarProperty Name="pressure_e" ColumnName="pressure_e" />
+          <ScalarProperty Name="accel_gravity_e" ColumnName="accel_gravity_e" />
+          <ScalarProperty Name="temp_e" ColumnName="temp_e" />
+          <ScalarProperty Name="azimuth_fusion" ColumnName="azimuth_fusion" />
+          <ScalarProperty Name="pitch_fusion" ColumnName="pitch_fusion" />
+          <ScalarProperty Name="roll_fusion" ColumnName="roll_fusion" />
+          <ScalarProperty Name="azimuth_e_gyro" ColumnName="azimuth_e_gyro" />
+          <ScalarProperty Name="pitch_e_gyro" ColumnName="pitch_e_gyro" />
+          <ScalarProperty Name="roll_e_gyro" ColumnName="roll_e_gyro" />
+          <ScalarProperty Name="deviceid" ColumnName="deviceid" />
+          <ScalarProperty Name="deviceinfo" ColumnName="deviceinfo" />
+          <ScalarProperty Name="percentile_g" ColumnName="percentile_g" />
+          <ScalarProperty Name="percentile_accg" ColumnName="percentile_accg" />
+          <ScalarProperty Name="percentile_p" ColumnName="percentile_p" />
+          <ScalarProperty Name="percentile_t" ColumnName="percentile_t" />
+          <ScalarProperty Name="percentile_o" ColumnName="percentile_o" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="cumulative_percentile" ColumnName="cumulative_percentile" />
+          <ScalarProperty Name="score_g" ColumnName="score_g" />
+          <ScalarProperty Name="score_ga" ColumnName="score_ga" />
+          <ScalarProperty Name="score_p" ColumnName="score_p" />
+          <ScalarProperty Name="score_t" ColumnName="score_t" />
+          <ScalarProperty Name="score_f" ColumnName="score_f" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

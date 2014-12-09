@@ -1,0 +1,10 @@
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\DQEngineFinal.exe.config
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\obj\Debug\DQEngineFinal.csprojResolveAssemblyReference.cache
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\DQEngineFinal.exe
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\DQEngineFinal.pdb
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\EntityFramework.dll
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\EntityFramework.xml
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\obj\Debug\DQEngineFinal.exe
+E:\Project\DQ\DQEngineFinal\DQEngineFinal\obj\Debug\DQEngineFinal.pdb

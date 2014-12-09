@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SensorTest_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DeviceData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="__createdAt" Type="datetimeoffset" Precision="3" Nullable="false" />
+    <Property Name="__updatedAt" Type="datetimeoffset" Precision="3" />
+    <Property Name="__version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="__deleted" Type="bit" Nullable="false" />
+    <Property Name="deviceid" Type="nvarchar(max)" />
+    <Property Name="deviceinfo" Type="nvarchar(max)" />
+    <Property Name="longitude" Type="float" />
+    <Property Name="latitutde" Type="float" />
+    <Property Name="altitude" Type="float" />
+    <Property Name="gravity_cumulative" Type="float" />
+    <Property Name="gravity_x" Type="float" />
+    <Property Name="gravity_y" Type="float" />
+    <Property Name="gravity_z" Type="float" />
+    <Property Name="error_gravity" Type="float" />
+    <Property Name="pressure_device" Type="float" />
+    <Property Name="pressure_service" Type="float" />
+    <Property Name="error_pressure" Type="float" />
+    <Property Name="accelerometer_x" Type="float" />
+    <Property Name="accelerometer_y" Type="float" />
+    <Property Name="accelerometer_z" Type="float" />
+    <Property Name="magneticfeild_x" Type="float" />
+    <Property Name="magneticfeild_y" Type="float" />
+    <Property Name="magneticfeild_z" Type="float" />
+    <Property Name="gyroscope_x" Type="float" />
+    <Property Name="gyroscope_y" Type="float" />
+    <Property Name="gyroscope_z" Type="float" />
+    <Property Name="height" Type="float" />
+    <Property Name="humidity" Type="float" />
+    <Property Name="temperature" Type="float" />
+    <Property Name="battery_status" Type="float" />
+    <Property Name="battery_level" Type="float" />
+    <Property Name="battery_voltage" Type="float" />
+    <Property Name="battery_temperature" Type="float" />
+    <Property Name="battery_technology" Type="nvarchar(max)" />
+    <Property Name="timestamp" Type="datetimeoffset" Precision="3" />
+    <Property Name="azimuth" Type="float" />
+    <Property Name="pitch" Type="float" />
+    <Property Name="roll" Type="float" />
+    <Property Name="complete" Type="bit" />
+  </EntityType>
+  <EntityType Name="DQIndicator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="__createdAt" Type="datetimeoffset" Precision="3" Nullable="false" />
+    <Property Name="__updatedAt" Type="datetimeoffset" Precision="3" />
+    <Property Name="__version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="__deleted" Type="bit" Nullable="false" />
+    <Property Name="gravity" Type="float" />
+    <Property Name="gravity_e" Type="float" />
+    <Property Name="pressure_e" Type="float" />
+    <Property Name="accel_gravity_e" Type="float" />
+    <Property Name="temp_e" Type="float" />
+    <Property Name="azimuth_fusion" Type="float" />
+    <Property Name="pitch_fusion" Type="float" />
+    <Property Name="roll_fusion" Type="float" />
+    <Property Name="azimuth_e_gyro" Type="float" />
+    <Property Name="pitch_e_gyro" Type="float" />
+    <Property Name="roll_e_gyro" Type="float" />
+    <Property Name="deviceid" Type="nvarchar(max)" />
+    <Property Name="deviceinfo" Type="nvarchar(max)" />
+    <Property Name="percentile_g" Type="float" />
+    <Property Name="percentile_accg" Type="float" />
+    <Property Name="percentile_p" Type="float" />
+    <Property Name="percentile_t" Type="float" />
+    <Property Name="percentile_o" Type="float" />
+    <Property Name="score" Type="float" />
+    <Property Name="cumulative_percentile" Type="float" />
+    <Property Name="score_g" Type="float" />
+    <Property Name="score_ga" Type="float" />
+    <Property Name="score_p" Type="float" />
+    <Property Name="score_t" Type="float" />
+    <Property Name="score_f" Type="float" />
+  </EntityType>
+  <EntityContainer Name="SensorTest_dbModelStoreContainer">
+    <EntitySet Name="DeviceData" EntityType="Self.DeviceData" Schema="SensorTest" store:Type="Tables" />
+    <EntitySet Name="DQIndicator" EntityType="Self.DQIndicator" Schema="SensorTest" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

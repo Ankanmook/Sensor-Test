@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "LineGraph";
+}
+
+<h2>LineGraph</h2>
+
+@model MvcIntesityChart.Models.SensorData
+
+@{
+    ViewBag.Title = "Chart Percentile";
+}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawChart);
+
+
+    function drawChart() {
+        // Create and populate the data table.
+
+        var device = [@Model.Device];
+        var gravity = [@Model.Gravity];
+        var acceleration= [@Model.Acceleration];
+        var pressure= [@Model.Pressure];
+        var temp= [@Model.Temperature];
+        var cumulative= [@Model.Cumulative];
+
+
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '@Model.DeviceTitle');
+        data.addColumn('number', 'Gravity');
+        data.addColumn('number', 'Accelerometer/Gravity');
+        data.addColumn('number', 'Pressure');
+        data.addColumn('number', 'Temperature');
+        data.addColumn('number', 'Cumulative Percentile');
+
+
+        for (i = 0; i < years.length; i++) {
+            data.addRow([device[i].toString(), graivty[i], acceleration[i],pressure[i],temp[i],cumulative[i]]);
+        }
+        var options = {
+            title: 'Cumulative Device DQ Percentile Compare',
+            hAxis: { title: '@Model.DeviceTitle', titleTextStyle: { color: 'red'} }
+        };
+
+        var chart = newgoogle.visualization.ColumnChart(document.getElementById('chartdiv'));
+        chart.draw(data, options);
+    }
+</script>
+<div id="chartdiv" style="width: 500px; height: 300px;">
+</div>
+
+@{
+    var myChartPerentile = new Chart(width: 600, height: 400)
+        .AddTitle("Percentiles")
+        .AddSeries(
+            name: "Employee",
+            xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave" },
+            yValues: new[] { "2", "6", "4", "5", "3" })
+        .Write();
+}
+
+@{
+    var myChartScore = new Chart(width: 600, height: 400)
+        .AddTitle("Score")
+        .AddSeries(
+            name: "Employee",
+            xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave" },
+            yValues: new[] { "2", "6", "4", "5", "3" })
+        .Write();
+}
+
