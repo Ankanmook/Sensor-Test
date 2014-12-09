@@ -1,8 +1,6 @@
 Sensor-Test
 ===========
 
-Version 5.0
-
 Categorizing and adjusting Data Quality Indicators for Android Motion and Environment Sensors
 
 Project Report submitted in partial fulfillment of the requirements for the Masters degree in Computer Science 
