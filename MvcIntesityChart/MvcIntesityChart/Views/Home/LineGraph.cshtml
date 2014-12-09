@@ -54,23 +54,4 @@
 <div id="chartdiv" style="width: 500px; height: 300px;">
 </div>
 
-@{
-    var myChartPerentile = new Chart(width: 600, height: 400)
-        .AddTitle("Percentiles")
-        .AddSeries(
-            name: "Employee",
-            xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave" },
-            yValues: new[] { "2", "6", "4", "5", "3" })
-        .Write();
-}
-
-@{
-    var myChartScore = new Chart(width: 600, height: 400)
-        .AddTitle("Score")
-        .AddSeries(
-            name: "Employee",
-            xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave" },
-            yValues: new[] { "2", "6", "4", "5", "3" })
-        .Write();
-}
 
