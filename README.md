@@ -3,7 +3,7 @@ Sensor-Test
 
 Categorizing and adjusting Data Quality Indicators for Android Motion and Environment Sensors
 
-Project Report submitted in partial fulfillment of the requirements for the Masters degree in Computer Science 
+Project Report submitted for the Masters degree in Computer Science 
 
 by 
 Ankan Mookherjee
