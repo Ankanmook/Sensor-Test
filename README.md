@@ -21,7 +21,10 @@ December 2014
 Technology Used:
 
 Mobile Application Client: Developed in Xamarin C# for Android API 11+, Version 3.0 and higher
-Database: SQL Azure, Azure Mobile Services
-DQIndicator: C# 5.0. LINQ, Entity Framework 6.0, Visual Studio 2013
+
+Cloud: SQL Azure, Azure Mobile Services
+
+DQIndicator: C# 5.0. LINQ, Entity Framework 6.0, Visual Studio 2013, Azure Web Job
+
 MVCIntensityChart: ASP.NET MVC 4.0, View Engine Razor
 
