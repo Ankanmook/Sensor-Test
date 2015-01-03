@@ -28,3 +28,4 @@ DQIndicator: C# 5.0. LINQ, Entity Framework 6.0, Visual Studio 2013, Azure Web J
 
 MVCIntensityChart: ASP.NET MVC 4.0, View Engine Razor
 
+AppRelease Folder contains the android APK (installers) progrssively released.
